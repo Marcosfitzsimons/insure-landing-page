@@ -130,6 +130,7 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0; 
+  padding-bottom: 2rem;
   height: 8rem;
   align-items: center;
 }
@@ -206,9 +207,10 @@ ul {
 
 .header__btn {
   position: relative;
-  z-index: 44444444444;
+  z-index: 444;
   background-color: var(--darkViolet);
 }
+
 
 /* ==============
     Main
@@ -408,6 +410,81 @@ ul {
   font-weight: 600;
 }
 
+/* ==============
+    Hover States
+============== */
+
+.nav-list__item, .header__btn, .how-we-work__button, .footer-article__link {
+  transition: .3s;
+}
+
+.how-we-work__button {
+  position: relative;
+  z-index: 4454554;
+}
+
+.nav-list__item:hover {
+  color: var(--darkViolet);
+}
+
+.nav-list__item--mod:hover {
+  background-color: var(--darkViolet);
+  color: var(--veryLightGray);
+}
+
+.header__btn:hover, .how-we-work__button:hover {
+  background-color: var(--veryLightGray);
+  color: var(--veryDarkViolet);
+}
+
+.redes-list__item{
+  transition: .4s;
+}
+
+.redes-list__item:hover {
+  transform: translateY(-15px);
+}
+
+.footer-article__link:hover {
+  text-decoration: underline;
+}
+
+
+/* ==============
+    Media Queries
+============== */
+
+@media (max-width: 600px) {
+  .nav.active {
+    position: absolute;
+    left: 0;
+    top: 7rem;
+    width: 100%;
+    display: block;
+    background-color: var(--darkViolet);
+  }
+  
+  .nav-list.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 18vh;
+    gap: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .hamburger.active {
+    background-image: url(../images/icon-close.svg);
+  }
+
+  .nav-list__item:hover {
+    color: var(--grayishBlue);
+  } 
+}
+
 @media (min-width: 750px) {
   .hamburger {
     display: none;
@@ -478,6 +555,7 @@ ul {
     background-color: var(--darkViolet);
     position: relative;
     height: 50rem;
+    padding-top: 6rem;
   }
   .header-info-wrapper {
     text-align: start;
@@ -493,6 +571,8 @@ ul {
   }
   .our-info {
     align-items: flex-start;
+    position: relative;
+    z-index: 44444544;
   }
   .cards-container {
     display: grid;
@@ -537,6 +617,10 @@ ul {
     justify-content: space-between;
     text-align: start;
   }
+  .footer-article {
+    position: relative;
+    z-index: 4444444444444444;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -579,6 +663,9 @@ ul {
   .our-info__title {
     font-size: 6rem;
   }
+  .our-info{
+    padding-top: 7rem; 
+  }
   .card__title {
     font-size: 3.1rem;
   }  
@@ -606,4 +693,12 @@ ul {
     font-size: 1.5rem;
     padding: 1.3rem 1.3rem;
   }
+}
+
+.header-fixed {
+    position: fixed;
+    width: 100%;
+    height: 7rem;
+    background-color:hsl(0, 0%, 98%);
+    z-index: 454444444444334344334;
 }
